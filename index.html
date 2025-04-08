@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prime Numbers Less Than 10,000</title>
+</head>
+<body>
+<h1>List of Prime Numbers Less Than 10,000</h1>
+<script>
+    function isPrime(number) {
+        if (number < 2) return false;
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i === 0) return false;
+        }
+        return true;
+    }
+
+    let count = 0;
+
+    for (let i = 2; i < 10000; i++) {
+        if (isPrime(i)) {
+            document.write(i);
+            count++;
+            // Add a comma or a line break
+            if (count % 10 === 0) {
+                document.write("<br>");
+            } else {
+                document.write(", ");
+            }
+        }
+    }
+</script>
+</body>
+</html>

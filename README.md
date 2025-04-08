@@ -1,0 +1,1 @@
+# js-function-2-prime-number
